@@ -8,8 +8,6 @@ The focus of this project is on minimalism, speed, and reliability - using moder
 
 
 ## Planned Features
-
-- Recursive directory scanning via `std::filesystem`
 - Per-file content hashing (SHA-256) to detect changes
 - Incremental sync with change detection (OS event monitoring or polling)
 - Bi-directional synchronization over TCP/UDP
@@ -22,7 +20,7 @@ The focus of this project is on minimalism, speed, and reliability - using moder
 
 
 ## Features (Completed)
-- Work in progress
+- Recursive directory scanning via `std::filesystem`
 
 
 
@@ -36,7 +34,6 @@ The focus of this project is on minimalism, speed, and reliability - using moder
 
 ### Building from Source
 
-To set up synk on your local machine, simply run the following commands in a terminal of your choice:
 ```bash
 git clone https://github.com/DanielC5/synk
 
