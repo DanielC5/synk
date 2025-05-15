@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# Ignore test data directories
+test_data/
+
+# Ignore todo document
+todo.md
+
+# Ignore raw compiled file (refactor to a \build directory later)
+main
+
+# Ignore VSCode config files
+.vscode/
