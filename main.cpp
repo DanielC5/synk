@@ -6,20 +6,30 @@ int main() {
     using namespace std;
     namespace fs = std::filesystem;
 
+    /* Using string variables to be able to take input
+    with getline() to avoid errors, then convert string
+    into a fs::path for easy use in later functions */
+
+    string source_input;
+    string target_input;
+
     fs::path source;
     fs::path target;
 
     cout << "Welcome to synk!" << '\n';
     cout << "Please enter a source directory filepath: ";
 
-    cin >> source;
+    getline(cin, source_input);
+    source = fs::path(source_input);
 
     if (!fs::exists(source)) {
         std::cerr << "Source directory does not exist: " << source << '\n';
         return 1;
         }
     cout << "Please enter a target directory filepath: ";
-    cin >> target;
+
+    getline(cin, target_input);
+    target = fs::path(target_input);
 
     cout << '\n' << "Contents of " << source << ": \n";
     for (const fs::directory_entry& dir_entry:
